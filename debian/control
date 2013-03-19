@@ -1,0 +1,14 @@
+Source: libgtk3-webkit-perl
+Section: perl
+Priority: optional
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Build-Depends: debhelper (>= 8)
+Build-Depends-Indep: perl
+Standards-Version: 3.9.2
+Homepage: http://search.cpan.org/dist/Gtk3-WebKit/
+
+Package: libgtk3-webkit-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends}, libgtk3-perl, gir1.2-webkit-3.0
+Description: WebKit bindings for Perl
+ Gtk3::WebKit provides the Perl bindings for the Gtk3 port of WebKit.

@@ -19,13 +19,7 @@ ${DEB}: ${OPKGNAME}.tar.gz
 
 .phony: upload
 upload: ${DEB}
-	umount /pve/${RELEASE}; mount /pve/${RELEASE} -o rw 
-	mkdir -p /pve/${RELEASE}/extra
-	rm -rf /pve/${RELEASE}/extra/${PACKAGE}_*.deb
-	rm -f /pve/${RELEASE}/extra/Packages*
-	cp ${DEB} /pve/${RELEASE}/extra
-	cd /pve/${RELEASE}/extra; dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
-	umount /pve/${RELEASE}; mount /pve/${RELEASE} -o ro
+	tar cf - ${DEB} | ssh repoman@repo.proxmox.com -- upload --product pve --dist stretch
 
 .PHONY: dinstall
 dinstall: ${DEB}

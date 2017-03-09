@@ -12,7 +12,7 @@ ${DEB}: ${OPKGNAME}.tar.gz
 	-rm -rf ${OPKGNAME}
 	tar xzf ${OPKGNAME}.tar.gz
 	cp -a debian ${OPKGNAME}
-	cd ${OPKGNAME}; dpkg-buildpackage -rfakeroot -b -us -uc
+	cd ${OPKGNAME}; dpkg-buildpackage -b -us -uc
 	-rm -rf ${OPKGNAME}
 	lintian ${DEB}
 

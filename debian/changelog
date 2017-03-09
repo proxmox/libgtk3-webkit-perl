@@ -1,3 +1,9 @@
+libgtk3-webkit-perl (0.03-2) unstable; urgency=low
+
+  * Rebuild for Debian Stretch
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 9 Mar 2017 13:52:22 +0100
+
 libgtk3-webkit-perl (0.03-1) unstable; urgency=low
 
   * Initial Release.

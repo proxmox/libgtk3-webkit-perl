@@ -1,7 +1,7 @@
 RELEASE=3.0
 
 PACKAGE=libgtk3-webkit-perl
-PKGREL=1
+PKGREL=2
 
 ARCH=all
 

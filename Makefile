@@ -19,7 +19,7 @@ ${DEB}: ${OPKGNAME}.tar.gz
 
 .phony: upload
 upload: ${DEB}
-	tar cf - ${DEB} | ssh repoman@repo.proxmox.com -- upload --product pve --dist stretch
+	tar cf - ${DEB} | ssh repoman@repo.proxmox.com -- upload --product pve,pmg --dist stretch
 
 .PHONY: dinstall
 dinstall: ${DEB}
